@@ -22,8 +22,8 @@ Partial Class Simulation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.locationLbl = New System.Windows.Forms.Label()
         Me.mylocationRdbtn = New System.Windows.Forms.RadioButton()
         Me.textRdbtn = New System.Windows.Forms.RadioButton()
@@ -64,6 +64,9 @@ Partial Class Simulation
         Me.femaleTbar = New System.Windows.Forms.TrackBar()
         Me.maleTbar = New System.Windows.Forms.TrackBar()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.DemographicsBox.SuspendLayout()
@@ -140,13 +143,13 @@ Partial Class Simulation
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea5)
         Me.Chart1.Location = New System.Drawing.Point(171, 9)
         Me.Chart1.Name = "Chart1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Name = "Series1"
+        Me.Chart1.Series.Add(Series5)
         Me.Chart1.Size = New System.Drawing.Size(459, 315)
         Me.Chart1.TabIndex = 12
         Me.Chart1.Text = "Chart1"
@@ -181,12 +184,13 @@ Partial Class Simulation
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 146)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(159, 113)
+        Me.GroupBox1.Size = New System.Drawing.Size(159, 130)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Weather"
@@ -232,7 +236,7 @@ Partial Class Simulation
         Me.DemographicsBox.Controls.Add(Me.genderBox)
         Me.DemographicsBox.Location = New System.Drawing.Point(12, 383)
         Me.DemographicsBox.Name = "DemographicsBox"
-        Me.DemographicsBox.Size = New System.Drawing.Size(280, 321)
+        Me.DemographicsBox.Size = New System.Drawing.Size(286, 321)
         Me.DemographicsBox.TabIndex = 20
         Me.DemographicsBox.TabStop = False
         Me.DemographicsBox.Text = "Demographics"
@@ -256,7 +260,7 @@ Partial Class Simulation
         Me.GroupBox2.Controls.Add(Me.childrenTbar)
         Me.GroupBox2.Location = New System.Drawing.Point(6, 148)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(268, 164)
+        Me.GroupBox2.Size = New System.Drawing.Size(274, 164)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Age Group"
@@ -384,6 +388,8 @@ Partial Class Simulation
         '
         'genderBox
         '
+        Me.genderBox.Controls.Add(Me.Label2)
+        Me.genderBox.Controls.Add(Me.Label1)
         Me.genderBox.Controls.Add(Me.femalePerLbl)
         Me.genderBox.Controls.Add(Me.malePerLbl)
         Me.genderBox.Controls.Add(Me.femaleLbl)
@@ -392,7 +398,7 @@ Partial Class Simulation
         Me.genderBox.Controls.Add(Me.maleTbar)
         Me.genderBox.Location = New System.Drawing.Point(6, 32)
         Me.genderBox.Name = "genderBox"
-        Me.genderBox.Size = New System.Drawing.Size(268, 110)
+        Me.genderBox.Size = New System.Drawing.Size(274, 110)
         Me.genderBox.TabIndex = 0
         Me.genderBox.TabStop = False
         Me.genderBox.Text = "Gender"
@@ -402,18 +408,18 @@ Partial Class Simulation
         Me.femalePerLbl.AutoSize = True
         Me.femalePerLbl.Location = New System.Drawing.Point(235, 67)
         Me.femalePerLbl.Name = "femalePerLbl"
-        Me.femalePerLbl.Size = New System.Drawing.Size(21, 13)
+        Me.femalePerLbl.Size = New System.Drawing.Size(13, 13)
         Me.femalePerLbl.TabIndex = 5
-        Me.femalePerLbl.Text = "0%"
+        Me.femalePerLbl.Text = "0"
         '
         'malePerLbl
         '
         Me.malePerLbl.AutoSize = True
         Me.malePerLbl.Location = New System.Drawing.Point(235, 29)
         Me.malePerLbl.Name = "malePerLbl"
-        Me.malePerLbl.Size = New System.Drawing.Size(21, 13)
+        Me.malePerLbl.Size = New System.Drawing.Size(13, 13)
         Me.malePerLbl.TabIndex = 4
-        Me.malePerLbl.Text = "0%"
+        Me.malePerLbl.Text = "0"
         '
         'femaleLbl
         '
@@ -456,6 +462,33 @@ Partial Class Simulation
         Me.Button2.TabIndex = 21
         Me.Button2.Text = "Export"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"High Tide", "Low Tide"})
+        Me.ComboBox2.Location = New System.Drawing.Point(11, 95)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(119, 21)
+        Me.ComboBox2.TabIndex = 6
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(259, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(15, 13)
+        Me.Label1.TabIndex = 22
+        Me.Label1.Text = "%"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(259, 67)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(15, 13)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "%"
         '
         'Simulation
         '
@@ -537,5 +570,8 @@ Partial Class Simulation
     Friend WithEvents youngTxt As System.Windows.Forms.TextBox
     Friend WithEvents teensTxt As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

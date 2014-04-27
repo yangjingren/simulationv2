@@ -227,4 +227,12 @@ Public Class Simulation
         femalePerLbl.Text = femaleTbar.Value
         maleTbar.Value = 100 - femaleTbar.Value
     End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label1_Click_4(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
+    End Sub
 End Class
